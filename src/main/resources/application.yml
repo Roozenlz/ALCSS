@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: ALCSS
+  banner:
+    location: banner.txt
+server:
+  port: 56789
+mybatis-plus:
+  global-config:
+    banner: false

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.roozen.alcss.mapper.SystemInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.roozen.alcss.entity.SystemInfo">
+        <id column="id" property="id" />
+        <result column="current_academic_year" property="currentAcademicYear" />
+        <result column="current_term" property="currentTerm" />
+        <result column="total_week" property="totalWeek" />
+        <result column="current_week" property="currentWeek" />
+        <result column="term_start_date" property="termStartDate" />
+        <result column="term_end_date" property="termEndDate" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+    </resultMap>
+
+</mapper>

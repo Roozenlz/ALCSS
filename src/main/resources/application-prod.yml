@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Lz034936mysql..
+    url: jdbc:mysql://localhost:3306/aust_lab?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+  devtools:
+    livereload:
+      #spring-boot-devtools模块包含嵌入式LiveReload服务器，可以在资源更改时用于触发浏览器刷新。
+      #同一时间只能运行一个LiveReload服务器。 开始应用程序之前，请确保没有其他LiveReload服务器正在运行。
+      #如果从IDE启动多个应用程序，则只有第一个应用程序将支持LiveReload
+      enabled: true #如果不想在应用程序运行时启动LiveReload服务器，则可以设置为false 。
+    restart:
+      enabled: false  #设置开启热部署

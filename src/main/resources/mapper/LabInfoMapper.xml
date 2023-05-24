@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.roozen.alcss.mapper.LabInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.roozen.alcss.entity.LabInfo">
+        <id column="id" property="id" />
+        <result column="lab_name" property="labName" />
+        <result column="lab_category_id" property="labCategoryId" />
+        <result column="device_number" property="deviceNumber" />
+        <result column="seating" property="seating" />
+        <result column="principal_id" property="principalId" />
+        <result column="principal_name" property="principalName" />
+        <result column="position" property="position" />
+        <result column="status" property="status" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,72 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Lz034936mysql..
+    url: jdbc:mysql://localhost:3306/alcss?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+  devtools:
+    livereload:
+      #spring-boot-devtools模块包含嵌入式LiveReload服务器，可以在资源更改时用于触发浏览器刷新。
+      #同一时间只能运行一个LiveReload服务器。 开始应用程序之前，请确保没有其他LiveReload服务器正在运行。
+      #如果从IDE启动多个应用程序，则只有第一个应用程序将支持LiveReload
+      enabled: true #如果不想在应用程序运行时启动LiveReload服务器，则可以设置为false 。
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: WEB-INF/**
+      #自动重启会记录日志
+      #记录在什么情况下重启的日志
+      #可以通过如下关闭
+      log-condition-evaluation-delta: false
+  mvc:
+    log-request-details: true
+
+  codec:
+    log-request-details: true
+#  security:
+#    user: #如果对默认的用户名和密码不满意，可以配置默认的用户名、密码和角色。这样项目启动后就不会随机生成密码了.
+#      name: admin
+#      password: 123456
+#      roles: admin
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted  # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
+
+logging:
+  level:
+    root: info
+  file:
+    path: ${user.dir}/logs
+debug: false
+
+
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.roozen.alcss
+  default-flat-param-object: true
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+    swagger-model-name: 实体类列表
+
+  documents:
+    - name: 标题1
+      group: default
+    - name: 标题2
+      group: 用户模块
+
